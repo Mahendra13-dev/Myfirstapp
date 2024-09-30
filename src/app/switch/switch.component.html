@@ -1,0 +1,26 @@
+<p>switch works!</p>
+<button type="button" class="btn btn-primary" (click)="updateStatus('delivered')">Delivered</button> &nbsp;
+<button type="button" class="btn btn-primary" (click)="updateStatus('cancelled')">cancelled</button> &nbsp;
+<button type="button" class="btn btn-primary" (click)="updateStatus('shipped')">Shipped</button>
+<br><br>
+<div [ngSwitch]="orderstatus">
+    <div *ngSwitchCase="'pending'">
+        <h6>Your order is pending</h6>
+    </div>
+    <div *ngSwitchCase="'processed'">
+        <h6>Your order is being processed</h6>
+    </div>
+    <div *ngSwitchCase="'shipped'">
+        <h6>Your order has been shipped</h6>
+    </div>
+    <div *ngSwitchCase="'delivered'">
+        <h6>Your order has been delivered</h6>
+    </div>
+    <div *ngSwitchCase="'cancelled'">
+        <h6>Your order has cancelled</h6>
+    </div>
+    <div *ngSwitchDefault>
+        <h6>Unknown status</h6>   
+    </div>
+
+</div>

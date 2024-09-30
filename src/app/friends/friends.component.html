@@ -1,0 +1,53 @@
+<div class="main">
+
+<h1>One way data binding :</h1>
+<p>In one way data binding data flows in single direction.</p><br>
+<p>i.e from component class to HTML (Template)</p>
+<h1>Interpolation</h1>
+<p>In intrpolation we write expression always in two curly braces</p>
+<p>{{syntax}}</p>
+<p>In Interpolation we display dynamic data in HTML (Template) </p><br>
+<p>Here are some properties displayed from component class</p>
+<h3>{{header}}</h3>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>{{friendsobj[0].ID}}</td>
+        <td>{{friendsobj[0].Name}}</td>
+        <td>{{friendsobj[0].Designation}} </td>
+        <td>{{friendsobj[0].salary}}</td>
+    </tr>
+    <tr>
+        <td>{{friendsobj[1].ID}}</td>
+        <td>{{friendsobj[1].Name}}</td>
+        <td>{{friendsobj[1].Designation}} </td>
+        <td>{{friendsobj[1].salary}}</td>
+    </tr>
+    <tr>
+        <td>{{friendsobj[2].ID}}</td>
+        <td>{{friendsobj[2].Name}}</td>
+        <td>{{friendsobj[2].Designation}} </td>
+        <td>{{friendsobj[2].salary}}</td>
+    </tr>
+    <tr>
+        <td>{{friendsobj[3].ID}}</td>
+        <td>{{friendsobj[3].Name}}</td>
+        <td>{{friendsobj[3].Designation}} </td>
+        <td>{{friendsobj[3].salary}}</td>
+        </tr>
+</table>
+
+<h1>Property binding</h1>
+<p>syntax:Syntax: [property]="expression"</p>
+<h3>In property binding it binds component property (Typescript) to HTML property</h3>
+<img [src]="imageurl" style="height: 300px;width: 500px;">
+<p>We used here <b>src</b> property from HTML and <b>imageurl</b> from component class </p>
+<p>for ex. [src]="imageurl"</p>
+</div>

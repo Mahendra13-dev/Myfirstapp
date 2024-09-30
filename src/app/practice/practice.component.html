@@ -1,0 +1,13 @@
+<p>practice works!</p>
+
+<h2>Two way Data Binding</h2>
+<!--  Two way Data Binding without ngModel -->
+<div>
+    <label for="id1">First Name :</label>
+    <input type="text" name="fName" id="id1" [value]="firstName" (input)="fNameChange($event)">
+</div>
+{{firstName}}
+<br>
+<div>
+    <button type="button" (click)="changeName()">Change Name</button>
+</div>

@@ -1,0 +1,115 @@
+<!-- <h3>Structural directive (ngIf)</h3>
+<br>
+<ol>
+    <li>It is used to add or remove elements </li>
+    <li>The expression should return either true or false</li>
+    <li>if expression is true then elements will get aded to DOM </li>
+    <li>If expression is false then element will get removed from DOM</li>
+</ol>
+<p>Example :- If your marks are greater than 60 percent then it will show result otherwise not</p>
+<div *ngIf="marks>=60">
+    <h4>Your result is first class</h4>
+</div>
+<br>
+<p>Example 2:-</p>
+<p>here "isshow" is expression for paragraph.if it returns true then it will add another element</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, culpa eius aspernatur provident sed natus
+    dolores recusandae. Ullam praesentium veritatis similique architecto excepturi impedit magnam.</p>
+<p *ngIf="isShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur commodi nobis neque molestiae ea eum, numquam
+    adipisci iure vel quod quaerat laborum dolor quis vitae!</p>
+    <button class="btn btn-primary" type="button" *ngIf="!isShow" (click)="displayMoreContent()">See more</button>
+    <button class="btn btn-primary" type="button" *ngIf="isShow" (click)="hideContent()">Hide</button>
+
+    <h3>*ngIf-else</h3>
+
+<div *ngIf="!isVisible; else logoutBlock">
+  <h1>Login</h1>
+  <div class=" container bg-light border w-75 shadow p-4" >
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<button class="btn btn-primary" type="button" (click)="login()">Logout</button>
+</div>
+<br><br>
+
+<ng-template #logoutBlock>
+  <h1>Logout</h1>
+  <button class="btn btn-primary" type="button" (click)="logout()">Login</button>
+  <br><br><br>
+</ng-template> -->
+
+
+<!-- <h1 class="text-center">*ngIf then else directive</h1>
+<div *ngIf="!isVisible; then loginBlock else logoutBlock"></div>
+    
+  <ng-template #loginBlock>
+    <h1>Login</h1>
+    <div class=" container bg-light border w-75 shadow p-4" >
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <button class="btn btn-primary" type="button" (click)="login()">Logout</button>
+  
+  </ng-template>
+
+  <ng-template #logoutBlock>
+    <h1>Logout</h1>
+    <button class="btn btn-primary" type="button" (click)="logout()">Login</button>
+  </ng-template>
+  <br><br><br>
+   -->
+<!-- <h3 class="text-center">*ngFor directive</h3>
+<ol>
+    <li>It is used to add element dynamically on the DOM </li>
+    <li>*ngFor will repeat portion of HTML elements once per each item of an array</li>
+</ol>
+<p>Example :- *ngFor="let item of employeeArr;let i=index;let first=first;let last=last;let e=even;let o=odd" etc </p>
+<h4>List of courses</h4>
+<ul>
+    <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+<h4>List of friends</h4>
+<ol>
+    <li *ngFor="let friends of friends">{{friends}}</li> 
+</ol>-->
+<div class="container">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr> 
+      
+           
+            
+        </tbody>
+    </table>
+
+

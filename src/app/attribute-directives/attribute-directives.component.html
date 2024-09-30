@@ -1,0 +1,82 @@
+<h2 class="text-center">Structural-directives works!</h2>
+<div class="container">
+    <table class="table table-bordered m-5 text-center">
+        <thead>
+            <tr>
+                <th> Sr No</th>
+                <th> Car Name</th>
+                <th> Brand</th>
+                <th> Price</th>
+                <th> Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let car of cars;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{car.carName}}</td>
+                <td>{{car.brand}}</td>
+                <td>{{car.price}}</td>
+                <td>{{car.color}}</td>
+            </tr> -->
+            <ng-container *ngFor="let car of cars;let i=index;let f-first ">
+                <tr *ngIf="car.color=='Black'">
+                    <td>{{i+1}}</td>
+                    <td>{{car.carName}}</td>
+                    <td>{{car.brand}}</td>
+                    <td>{{car.price}}</td>
+                    <td>{{car.color}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+
+    </table>
+</div>
+<hr>
+<hr><hr>
+
+<h3 class="text-center">Attribute directive (ngClass) </h3>
+<div class="container">
+<table class="table table-bordered text-center m-4 w-70">
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;let i=index;let f=first" [ngClass]="{'bg-primary':f,'bg-success':product.price==25000}">
+            <td>{{i+1}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+
+        </tr>
+    </tbody>
+</table>
+</div><br>
+<hr><hr><hr>
+
+<h3 class="text-center">ngStyle directive</h3>
+<div class="container">
+    <table class="table table-bordered text-center w-70 m-4">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Student Name</th>
+                <th>Adress</th>
+                <th>Mobile No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students;let i=index;" [ngStyle]="{'background-color':student.studentName=='John'?'grey':'yellow'}">
+                <td>{{i+1}}</td>
+                <td>{{student.studentName}}</td>
+                <td>{{student.address}}</td>
+                <td>{{student.mobileNo}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

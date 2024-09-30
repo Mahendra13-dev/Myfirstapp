@@ -1,0 +1,14 @@
+<p>totalprice works!</p>
+<div>
+    <h2>Price Calculator</h2>
+    <label for="price">Price:</label>
+    <input id="price" type="number" [value]="price" (input)="onPriceChange($event)" required>
+  
+    <label for="quantity">Quantity:</label>
+    <input id="quantity" type="number" [value]="quantity" (input)="onQuantityChange($event)" required>
+  
+    <div *ngIf="totalPrice > 0">
+      <h3>Total Price: {{ totalPrice }}</h3>
+    </div>
+  </div>
+  

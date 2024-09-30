@@ -1,0 +1,15 @@
+<p>reactive-form works!</p>
+<div class="container w-50 shadow p-4">
+    <h6 class="text-center text-decoration-underline">Registration Form</h6>
+    <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+        <div class="mb-3">
+            <label for="id1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="id1" formControlName="name">
+        </div>
+        <div class="mb-3">
+            <label for="id2" class="form-label">Mobile No</label>
+            <input type="text" class="form-control" id="id2" formControlName="mobile">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>

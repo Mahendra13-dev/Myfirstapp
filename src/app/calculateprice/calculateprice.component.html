@@ -1,0 +1,10 @@
+<p>calculateprice works!</p>
+
+
+<h2>Price Calculator</h2>
+<label for="price">Price:</label>
+<input id="price" type="number" [value]="price"  (input)="onPriceChange($event)" required><br><br>
+<label for="quantity">Quantity:</label>
+<input id="quantity" type="number" [value]="quantity" (input)="onQuantityChange($event)" required>
+<!-- <button onclick="calculateTotalPrice ()">Calculate</button> -->
+<p>Total price : {{totalprice}}</p>

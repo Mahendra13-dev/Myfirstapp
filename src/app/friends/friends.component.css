@@ -1,0 +1,10 @@
+.main{
+position: relative;
+margin: 10px 300px;
+
+}
+
+table,td,tr{
+    border:2px solid blue
+    
+}

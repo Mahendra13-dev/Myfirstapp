@@ -1,0 +1,19 @@
+<h3 class="text-center mb-4 " >Template driven form</h3>
+<div class="container w-50 shadow border p-4 border">
+  <h5 class="text-center text-decoration-underline">Signup Form</h5>
+  <form #signupForm="ngForm" (ngSubmit)="save(signupForm)">
+    <div class="mb-3">
+      <label for="id1" class="form-label">Name</label>
+      <input type="text" class="form-control" name="fName" id="id1" [(ngModel)]="signupFormobj.name">
+    </div>
+    <div class="mb-3" >
+      <label for="id2" class="form-label">Mobile Number</label>
+      <input type="text" class="form-control" name="mobNo" id="id2" [(ngModel)]="signupFormobj.mobileno">
+    </div>
+    <div class="mb-3">
+      <label for="id3" class="form-label">Email</label>
+      <input type="text" class="form-control" name="email" id="id3" [(ngModel)]="signupFormobj.email">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button> 
+  </form>
+</div>
